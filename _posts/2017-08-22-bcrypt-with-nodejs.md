@@ -27,5 +27,3 @@ date: 2017-08-22
     console.log('is a match: ', isMatch);
   });
 {% endhighlight %}
-
-powered by [Jekyll](http://jekyllrb.com)
