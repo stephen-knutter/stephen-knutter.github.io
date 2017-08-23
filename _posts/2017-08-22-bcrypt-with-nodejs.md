@@ -8,10 +8,8 @@ date: 2017-08-22
 `touch app.js package.json`
 `npm install bcrypt`
 
-```ruby
-require 'redcarpet'
-markdown= Redcarpet.new(
-  ruby
+
+{% highlight ruby %}
   const bcrypt = require('bcrypt');
   /*  10 is for rounds */
   bcrypt.genSalt(10, (err, salt) => {
@@ -28,7 +26,6 @@ markdown= Redcarpet.new(
   bcrypt.compare('pa$$w0rd', '$2a$10$XRDCUm0LmHmlo8Iv3jxWHeG1Hg1Tv5/B6NUK8zIRLOXZHJcLLtazm', (err, isMatch) => {
     console.log('is a match: ', isMatch);
   });
-)
-puts markdown.to_html
-```
+{% endhighlight %}
+
 powered by [Jekyll](http://jekyllrb.com)
