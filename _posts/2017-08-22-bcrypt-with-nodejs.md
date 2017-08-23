@@ -11,6 +11,7 @@ date: 2017-08-22
 ```ruby
 require 'redcarpet'
 markdown= Redcarpet.new(
+  ruby
   const bcrypt = require('bcrypt');
   /*  10 is for rounds */
   bcrypt.genSalt(10, (err, salt) => {
