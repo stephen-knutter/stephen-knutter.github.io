@@ -8,11 +8,6 @@ date: 2017-08-22
 `touch app.js package.json`
 `npm install bcrypt`
 
-
-{% highlight ruby %}
-  def foo
-    puts 'foo'
-   end
-{% endhighlight %}
+() => { return 'ahh'};
 
 powered by [Jekyll](http://jekyllrb.com)
