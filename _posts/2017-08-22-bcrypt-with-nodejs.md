@@ -8,6 +8,24 @@ date: 2017-08-22
 `touch app.js package.json`
 `npm install bcrypt`
 
-() => { return 'ahh'};
+{% highlight js %}
+  const bcrypt = require('bcrypt');
+  
+  /*  10 is for rounds */
+  bcrypt.genSalt(10, (err, salt) => {
+
+    console.log('salt: ', salt);
+
+   /* Using salt and password 'galvanize' to generate hash */
+    bcrypt.hash('galvanize', salt, (err, hash) => {
+      console.log('hash: ', hash);  
+    });
+  });
+
+  /* This is used to compare a given password('galvanize') to the stored hash */
+  bcrypt.compare('galvanize', '$2a$10$XRDCUm0LmHmlo8Iv3jxWHeG1Hg1Tv5/B6NUK8zIRLOXZHJcLLtazm', (err, isMatch) => {
+    console.log('is a match: ', isMatch);
+  });
+{% endhighlight %}
 
 powered by [Jekyll](http://jekyllrb.com)
