@@ -8,7 +8,7 @@ date: 2017-08-22
 `touch app.js package.json`
 `npm install bcrypt`
 
-```JavaScript
+```ruby
 require 'redcarpet'
 markdown= Redcarpet.new(
   const bcrypt = require('bcrypt');
