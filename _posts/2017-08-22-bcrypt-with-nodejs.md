@@ -9,22 +9,25 @@ date: 2017-08-22
 `npm install bcrypt`
 
 ```JavaScript
-const bcrypt = require('bcrypt');
+require 'redcarpet'
+markdown= Redcarpet.new(
+  const bcrypt = require('bcrypt');
+  /*  10 is for rounds */
+  bcrypt.genSalt(10, (err, salt) => {
 
-/*  10 is for rounds */
-bcrypt.genSalt(10, (err, salt) => {
+    console.log('salt: ', salt);
 
-  console.log('salt: ', salt);
-
- /* Using salt and password 'galvanize' to generate hash */
-  bcrypt.hash('pa$$w0rd', salt, (err, hash) => {
-    console.log('hash: ', hash);  
+   /* Using salt and password 'galvanize' to generate hash */
+    bcrypt.hash('pa$$w0rd', salt, (err, hash) => {
+      console.log('hash: ', hash);  
+    });
   });
-});
 
-/* This is used to compare a given password('galvanize') to the stored hash */
-bcrypt.compare('pa$$w0rd', '$2a$10$XRDCUm0LmHmlo8Iv3jxWHeG1Hg1Tv5/B6NUK8zIRLOXZHJcLLtazm', (err, isMatch) => {
-  console.log('is a match: ', isMatch);
-});
+  /* This is used to compare a given password('galvanize') to the stored hash */
+  bcrypt.compare('pa$$w0rd', '$2a$10$XRDCUm0LmHmlo8Iv3jxWHeG1Hg1Tv5/B6NUK8zIRLOXZHJcLLtazm', (err, isMatch) => {
+    console.log('is a match: ', isMatch);
+  });
+)
+puts markdown.to_html
 ```
 powered by [Jekyll](http://jekyllrb.com)
