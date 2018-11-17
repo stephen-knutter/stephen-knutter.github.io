@@ -42,6 +42,10 @@ ul.posts li {
     list-style: none;
 }
 
+.container {
+  margin-bottom: 1rem;
+}
+
 .tag {
     background-color: #F8F8F8;
     padding: 10px;
