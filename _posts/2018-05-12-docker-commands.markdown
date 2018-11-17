@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "A list of helpful docker commands"
-date: 2018-05-12
+date: Sep 12, 2018 16:20:00
+tags: docker devops
 ---
 
 [Play With Docker](https://play-with-docker.com)
@@ -21,7 +22,7 @@ Should see a response from both `Client:` and `Server:`
     > $ docker image ls
 ```
 
-Run a filter i.e. show only images tagged ast latest
+Run a filter i.e. show only images tagged as latest
 ```console
     > $ docker image ls --filter=reference="*:latest"
 ```
@@ -38,7 +39,7 @@ Filter for official images
 
 ##### Inspect a docker image
 ```console
-    > $ docker image inspect ubuntu:lates
+    > $ docker image inspect ubuntu:latest
 ```
 
 ##### Remove a docker image

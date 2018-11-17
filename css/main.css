@@ -42,6 +42,12 @@ ul.posts li {
     list-style: none;
 }
 
+.tag {
+    background-color: #F8F8F8;
+    padding: 10px;
+    color: #888888;
+}
+
 /*************** HUGO THEME ***********************/
 
 html, body {

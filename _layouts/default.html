@@ -6,13 +6,17 @@
 			
 			<link rel="stylesheet" type="text/css" href="/css/main.css" />
 			<link rel="stylesheet" type="text/css" href="/css/markdown.css" />
-			<link rel="stylesheet" type="text/css" href="/css/colors/friendly.css" />
+			<link rel="stylesheet" type="text/css" href="/css/colors/default.css" />
 		</head>
 		<body>
+			{% if site.tags != "" %}
+			  {% include collecttags.html %}
+			{% endif %}
 			<nav>
 	    		<ul>
-				<li><a href="/">Home</a></li>
-	        		<li><a href="/blog">Blog</a></li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/blog">Blog</a></li>
+					<li><a href="/tags">Tags</a></li>
 	    		</ul>
 			</nav>
 			<div class="container">
