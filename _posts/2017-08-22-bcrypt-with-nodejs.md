@@ -16,14 +16,14 @@ date: 2017-08-22
 
     console.log('salt: ', salt);
 
-   /* Using salt and password 'galvanize' to generate hash */
-    bcrypt.hash('galvanize', salt, (err, hash) => {
+   /* Using salt and password 'foobar' to generate hash */
+    bcrypt.hash('foobar', salt, (err, hash) => {
       console.log('hash: ', hash);  
     });
   });
 
-  /* This is used to compare a given password('galvanize') to the stored hash */
-  bcrypt.compare('galvanize', '$2a$10$XRDCUm0LmHmlo8Iv3jxWHeG1Hg1Tv5/B6NUK8zIRLOXZHJcLLtazm', (err, isMatch) => {
+  /* This is used to compare a given password('foobar') to the stored hash */
+  bcrypt.compare('foobar', '$2a$10$XRDCUm0LmHmlo8Iv3jxWHeG1Hg1Tv5/B6NUK8zIRLOXZHJcLLtazm', (err, isMatch) => {
     console.log('is a match: ', isMatch);
   });
 {% endhighlight %}
