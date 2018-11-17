@@ -43,13 +43,15 @@ ul.posts li {
 }
 
 .tag-list {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .tag {
+    display: inline-block;
     background-color: #F8F8F8;
     padding: 10px;
     color: #888888;
+    margin: 2px 0;
 }
 
 /*************** HUGO THEME ***********************/
