@@ -6,7 +6,7 @@ tags: mongodb database
 ---
 
 Example mongodb document
-```json
+```
     {
         _id: ObjectID("4b1bb6ff3abc8266a21890co")
         listing: {
