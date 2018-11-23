@@ -51,7 +51,7 @@ db.listings.aggregate([
 From there, [$project](https://docs.mongodb.com/manual/reference/operator/aggregation/project/) any property of the document.
 ```
 {
-    item {
+    item: {
         name: "french toast"
     }
 }
