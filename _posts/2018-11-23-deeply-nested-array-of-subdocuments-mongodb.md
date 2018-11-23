@@ -34,7 +34,11 @@ Example mongodb document
     }
 ```
 
-Use mongodb [aggregation](https://docs.mongodb.com/manual/core/aggregation-pipeline/index.html) to access categories &rtrif; items &rtrif; name and return the embedded document
+<pre>
+    <code>
+        Use mongodb [aggregation](https://docs.mongodb.com/manual/core/aggregation-pipeline/index.html) to access categories &rtrif; items &rtrif; name and return the embedded document
+    </code>
+</pre>
 
 assuming our database is named `listings` and looking for `french toast`
 ```
