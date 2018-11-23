@@ -10,23 +10,23 @@ Example mongodb document
     {
         _id: ObjectID("4b1bb6ff3abc8266a21890co")
         listing: {
-            name: 'foo'
-            address: 'ham street'
+            name: "foo"
+            address: "ham street"
         },
         categories: [
             {
-                title: 'bar'
+                title: "bar"
                 items: [
                     {
-                        name: 'eggs'
+                        name: "eggs"
                     }
                 ]
             },
             {
-                title: 'baz'
+                title: "baz"
                 items: [
                     {
-                        name: 'french toast'
+                        name: "french toast"
                     }
                 ]
             }
@@ -36,15 +36,23 @@ Example mongodb document
 
 Use mongodb [aggregation](https://docs.mongodb.com/manual/core/aggregation-pipeline/index.html) to access categories -> items -> name and return the embedded document
 
-assuming our database is named `listings` and looking for `french toast`
+assuming our database is named `listings` and looking item names that have the word `french`
 ```
 db.listings.aggregate([
-    { $unwind: '$categories' },
-    { $unwind: '$categories.items' },
-    { $match: {'categories.items.name': {$regex: "french", $options: "i"}}},
+    { $unwind: "$categories" },
+    { $unwind: "$categories.items" },
+    { $match: {"categories.items.name": {$regex: "french", $options: "i"}}},
     { $limit: 5 },
-    { $project: {_id: 0, item: { name: '$categories.items.name'}}}
+    { $project: {_id: 0, item: { name: "$categories.items.name"}}}
 ])
 ```
 [$unwind](https://docs.mongodb.com/manual/reference/operator/aggregation/unwind/) both arrays `categories` and `items` which essentialy creates new documents.
-From there, project any property of the document.
+
+From there, [$project](https://docs.mongodb.com/manual/reference/operator/aggregation/project/) any property of the document.
+```
+{
+    item {
+        name: "french toast"
+    }
+}
+```
