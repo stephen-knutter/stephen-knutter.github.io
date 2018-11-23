@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Accessing deeply nested array of SubDocuments in mongodb"
+title: "Access deeply nested array of subdocuments in mongodb"
 date: Nov 23, 2018 16:20:00
 tags: mongodb database
 ---
@@ -34,9 +34,9 @@ Example mongodb document
     }
 ```
 
-Use mongodb [aggregation](https://docs.mongodb.com/manual/core/aggregation-pipeline/index.html) to access categories -> items -> name, that match the specified critieria
+Use mongodb [aggregation](https://docs.mongodb.com/manual/core/aggregation-pipeline/index.html) to access categories -> items -> name and return the embedded document
 
-assuming our database is named listings and looking for french toast
+assuming our database is named `listings` and looking for `french toast`
 ```
 db.listings.aggregate([
     { $unwind: '$categories' },
@@ -46,5 +46,5 @@ db.listings.aggregate([
     { $project: {_id: 0, item: { name: '$categories.items.name'}}}
 ])
 ```
-$unwind both arrays `categories` and `items` which essentialy creates new documents
-from there project any property from either of the arrays
+[$unwind](https://docs.mongodb.com/manual/reference/operator/aggregation/unwind/) both arrays `categories` and `items` which essentialy creates new documents.
+From there, project any property of document.
