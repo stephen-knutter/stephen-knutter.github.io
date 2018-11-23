@@ -146,7 +146,7 @@ ENTRYPOINT ["node", "./app.js"]
     > $ docker container run -d --name web1 --publish 8080:8080 test:latest
 ```
 
-#### No Space left on device
+##### No Space left on device
 ```console
-> $ rm -rf ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2
+    > $ rm -rf  ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2
 ```

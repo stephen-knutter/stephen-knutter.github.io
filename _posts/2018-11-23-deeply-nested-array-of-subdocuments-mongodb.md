@@ -36,7 +36,7 @@ Example mongodb document
 
 Use mongodb [aggregation](https://docs.mongodb.com/manual/core/aggregation-pipeline/index.html) to access categories -> items -> name and return the embedded document
 
-assuming our database is named `listings` and looking item names that have the word `french`
+assuming our database is named `listings` and looking for item names that have the word `french`
 ```
 db.listings.aggregate([
     { $unwind: "$categories" },
