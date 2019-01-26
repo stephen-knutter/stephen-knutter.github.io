@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Install Mongodb on a Mac"
-date: Nov 23, 2018 16:20:00
+date: Jan 26, 2019 16:20:00
 tags: mongodb database
 ---
 
