@@ -6,7 +6,7 @@ tags: mongodb database
 ---
 
 Example mongodb document
-```
+```javascript
     {
         _id: ObjectID("4b1bb6ff3abc8266a21890co")
         listing: {
@@ -39,19 +39,22 @@ Use mongodb [aggregation](https://docs.mongodb.com/manual/core/aggregation-pipel
 assuming our database is named `listings` and looking for item names that have the word `french`
 ```javascript
 db.listings.aggregate([
+    
     // Make $match & $sort first in aggregation pipelines
     // to take advantage of indexes
+
     { $match: {"categories.items.name": {$regex: "french", $options: "i"}}},
     { $unwind: "$categories" },
     { $unwind: "$categories.items" },
     { $limit: 5 },
     { $project: {_id: 0, item: { name: "$categories.items.name"}}}
+
 ])
 ```
 [$unwind](https://docs.mongodb.com/manual/reference/operator/aggregation/unwind/) both arrays `categories` and `items` which essentialy creates new documents.
 
 From there, [$project](https://docs.mongodb.com/manual/reference/operator/aggregation/project/) any property of the document.
-```
+```javascript
 {
     item: {
         name: "french toast"
