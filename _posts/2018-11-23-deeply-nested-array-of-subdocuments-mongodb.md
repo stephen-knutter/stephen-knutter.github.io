@@ -39,9 +39,11 @@ Use mongodb [aggregation](https://docs.mongodb.com/manual/core/aggregation-pipel
 assuming our database is named `listings` and looking for item names that have the word `french`
 ```
 db.listings.aggregate([
+    // Make $match & $sort first in aggregation pipelines
+    // to take advantage of indexes
+    { $match: {"categories.items.name": {$regex: "french", $options: "i"}}},
     { $unwind: "$categories" },
     { $unwind: "$categories.items" },
-    { $match: {"categories.items.name": {$regex: "french", $options: "i"}}},
     { $limit: 5 },
     { $project: {_id: 0, item: { name: "$categories.items.name"}}}
 ])
