@@ -12,7 +12,7 @@ go to download
 $ cd ~/downloads
 ```
 
-extract the tar file from the download
+extract the tar from the download
 ```
 $ tar xvf mongodb-osx-x86_64-3.0.0.tgz
 ```
