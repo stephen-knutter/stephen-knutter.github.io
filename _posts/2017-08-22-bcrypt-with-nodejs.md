@@ -7,7 +7,7 @@ tags: bcrypt nodejs security
 
 install bcrypt
 ```console
-> $ npm i -S bcrypt
+$ npm i -S bcrypt
 ```
 generate salt and hash
 ```javascript

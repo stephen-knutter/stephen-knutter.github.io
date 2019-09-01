@@ -36,16 +36,15 @@ Example mongodb document
 
 Use mongodb [aggregation](https://docs.mongodb.com/manual/core/aggregation-pipeline/index.html) to access categories -> items -> name and return the embedded document
 
-assuming our database is named `listings` and looking for item names that have the word `french`
+assuming our database has a collection named `listings` and looking for item names that have the word `french`
 ```javascript
 db.listings.aggregate([
     
-    // Make $match & $sort first in aggregation pipelines
-    // to take advantage of indexes
-
+    /* Make $match & $sort first in aggregation pipelines to take advantage of indexes */
     { $match: {"categories.items.name": {$regex: "french", $options: "i"}}},
     { $unwind: "$categories" },
     { $unwind: "$categories.items" },
+    { $match: {"categories.items.name": {$regex: "french", $options: "i"}}},
     { $limit: 5 },
     { $project: {_id: 0, item: { name: "$categories.items.name"}}}
 
