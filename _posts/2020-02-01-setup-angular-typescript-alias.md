@@ -45,6 +45,7 @@ $ cd ..
 ```
 
 And that's it, now you can import via:
+
 `import { Whatever } from '@app/whatever/file'`
 
 NOTE: May need to close and re-open code editor, as well as start and re-start app
