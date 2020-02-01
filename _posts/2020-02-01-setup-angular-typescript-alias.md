@@ -16,11 +16,13 @@ $ cd angular-app
 ```
 
 In the root will be a `tsconfig.json` file
+
 Go into the source file
 ```console
 $ cd src
 ```
 Inside the source directory is a `tsconfig.app.json` file which extends `tsconfig.json`
+
 This file is responsible for setting the `baseUrl` property inside `compilerOptions`
 
 In order to setup import aliases add the `baseUrl` property inside the root file
