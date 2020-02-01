@@ -28,12 +28,10 @@ $ cd ..
 ```
 
 ```json
-/* tsconfig.json */
 {
   "compileOnSave": false,
   "compilerOptions": {
-    Omitted Props,
-
+    "...": "...",
     "baseUrl": "./src",
     "paths": {
       "@app/*": ["app/*"],
@@ -43,7 +41,7 @@ $ cd ..
 }
 ```
 
-And that's it now you can import via `@app/whatever/file/you/need`
+And that's it, now you can import via ~ `import { Whatever } from '@app/whatever/file/'`
 
 NOTE: May need to close and re-open code editor, as well as start and re-start app
 if already running
