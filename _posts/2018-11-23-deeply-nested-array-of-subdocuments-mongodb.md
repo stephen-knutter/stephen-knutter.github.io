@@ -44,7 +44,6 @@ db.listings.aggregate([
     { $match: {"categories.items.name": {$regex: "french", $options: "i"}}},
     { $unwind: "$categories" },
     { $unwind: "$categories.items" },
-    { $match: {"categories.items.name": {$regex: "french", $options: "i"}}},
     { $limit: 5 },
     { $project: {_id: 0, item: { name: "$categories.items.name"}}}
 
