@@ -11,7 +11,7 @@ tags: javascript typescript angular
 
 Generate a new Angular App with the CLI
 ```console
-$ ng g new angular-app
+$ ng new angular-app
 $ cd angular-app
 ```
 
