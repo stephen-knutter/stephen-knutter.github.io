@@ -52,15 +52,18 @@ export class FileResolver {
 `graphql-upload` along with the `Upload` scalar come with Apollo 2
 
 Test this in [Postman](https://www.postman.com/downloads/)
--Select `Post`
--Enter the url to your Graph server i.e. `http://localhost:5000/graphql`
--Select `form-data` and the `Body` tab
--Fill out the `Body` tab as follows
+
+*Select `Post`
+*Enter the url to your Graph server i.e. `http://localhost:5000/graphql`
+*Select `form-data` and the `Body` tab
+*Fill out the `Body` tab as follows
+
 | Key           | Value         |
 | ------------- |-------------|
 | operations    | {"query":"mutation UploadFile($file:Upload!) {\n  uploadFile(file:$file)\n}", "variables": { "file": null } |
 | map           |  { "0": ["variables.file"] } |
 | 0             |    Choose File   |
+
 Click `Send`
 
 Successful response
@@ -72,4 +75,4 @@ Successful response
 }
 ```
 
-File should now be in the `/uploads` folder in the app root directory
+File should now be in the `/uploads` folder in the app root
