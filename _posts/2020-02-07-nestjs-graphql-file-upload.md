@@ -53,10 +53,10 @@ export class FileResolver {
 
 Test this in [Postman](https://www.postman.com/downloads/)
 
-*Select `Post`
-*Enter the url to your Graph server i.e. `http://localhost:5000/graphql`
-*Select `form-data` and the `Body` tab
-*Fill out the `Body` tab as follows
+1. Select `Post`
+2. Enter the url to your Graph server i.e. `http://localhost:5000/graphql`
+3. Select `form-data` and the `Body` tab
+4. Fill out the `Body` tab as follows
 
 | Key           | Value         |
 | ------------- |-------------|
