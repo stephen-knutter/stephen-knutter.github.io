@@ -63,7 +63,7 @@ Test this in [Postman](https://www.postman.com/downloads/)
 
 | Key           | Value         |
 | ------------- |-------------|
-| operations    | {"query":"mutation UploadFile($file:Upload!) {\n  uploadFile(file:$file)\n}", "variables": { "file": null } |
+| operations    | {"query":"mutation UploadFile($file:Upload!) {\n  uploadFile(file:$file)\n}", "variables": { "file": null }} |
 | map           |  { "0": ["variables.file"] } |
 | 0             |    Choose File   |
 
