@@ -2,7 +2,7 @@
 layout: post
 title: "Using bcrypt with node.js to salt and hash passwords"
 date: 22 Aug, 2017 16:20:00
-tags: bcrypt nodejs security
+tags: bcrypt nodejs security javascript
 ---
 
 install bcrypt
