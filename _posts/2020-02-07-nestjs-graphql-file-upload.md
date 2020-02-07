@@ -17,7 +17,7 @@ Configure GraphQL:
 
 [NestJS GraphQL](https://docs.nestjs.com/graphql/quick-start)
 
-In the root of the app outside the `src` directory, create a directory named `uploads`
+In the root of the app, outside the `src` directory, create a directory named `uploads` to save the uploaded file
 
 Create a Resolver for the upload
 ```typescript
