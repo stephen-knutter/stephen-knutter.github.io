@@ -4,6 +4,9 @@ import Bio from "./bio"
 import { rhythm, scale } from "../utils/typography"
 import layoutStyles from './layout.module.css';
 
+import { config } from '@fortawesome/fontawesome-svg-core' 
+config.autoAddCss = false
+
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   let header
