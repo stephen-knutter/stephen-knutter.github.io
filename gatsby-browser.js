@@ -1,4 +1,5 @@
 // custom typefaces
 import "typeface-quattrocento-sans"
 
-import "prismjs/themes/prism.css"
+// import "prismjs/themes/prism.css"
+import "./styles/prism-knutter.css"

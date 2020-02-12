@@ -54,7 +54,8 @@ const Layout = ({ location, title, children }) => {
             marginLeft: `auto`,
             marginRight: `auto`,
             maxWidth: rhythm(35),
-            // padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            paddingLeft: `${rhythm(3 / 4)}`,
+            paddingRight: `${rhythm(3 / 4)}`,
             position: `relative`,
             top: rhythm(1),
             zIndex: 100
@@ -80,7 +81,7 @@ const Layout = ({ location, title, children }) => {
             marginLeft: `auto`,
             marginRight: `auto`,
             maxWidth: rhythm(35),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            padding: `${rhythm(.5)} ${rhythm(3 / 4)}`,
           }}
       >
         <main>{children}</main>

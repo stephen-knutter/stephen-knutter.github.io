@@ -29,6 +29,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             style={{
               ...scale(-1 / 5),
               display: `block`,
+              marginTop: `none`,
               marginBottom: rhythm(1),
             }}
           >

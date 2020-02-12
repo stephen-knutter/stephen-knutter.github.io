@@ -13,7 +13,8 @@ fairyGateTheme.overrideThemeStyles = () => {
       textDecoration: `underline`,
     },
     "blockquote": {
-      borderColor: `rgba(98, 73, 237, 1)`
+      borderColor: `rgba(98, 73, 237, 1) !important`,
+      borderLeft: `0.54375rem solid #1ca086 !important`
     }
   }
 }
