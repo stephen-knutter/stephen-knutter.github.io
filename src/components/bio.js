@@ -37,7 +37,7 @@ const Bio = () => {
   const { author } = data.site.siteMetadata
   return (
     <div style={{marginBottom: rhythm(2.5), zIndex: 2}}>
-      <Link to={`/`}><h1 style={{color: `white`, display: `inline-block`}}><FontAwesomeIcon icon={faCodeBranch} size="sm" /> {author}</h1></Link>
+      <Link to={`/`}><h1 style={{color: `white`, display: `inline-block`}}><FontAwesomeIcon style={{color: 'hotpink'}} icon={faCodeBranch} size="sm" /> {author}</h1></Link>
       <p>Web &amp; Mobile JS Developer</p>
     </div>
   )
