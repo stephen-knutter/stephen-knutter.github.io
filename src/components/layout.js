@@ -34,7 +34,7 @@ const Layout = ({ location, title, children }) => {
     )
   } else {
     header = (
-      <h3 style={{marginTop: 0,}}>
+      <h3 style={{marginTop: 0}}>
         <Link
           style={{
             boxShadow: `none`,
@@ -85,6 +85,7 @@ const Layout = ({ location, title, children }) => {
             marginRight: `auto`,
             maxWidth: rhythm(35),
             padding: `${rhythm(.5)} ${rhythm(3 / 4)}`,
+            minHeight: `calc(100vh - ${rhythm(17)})`
           }}
       >
         <main>{children}</main>
