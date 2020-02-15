@@ -13,64 +13,64 @@ description: "A quick reference of docker commands for running containers and cr
 > `usermod -aG docker <user>` - On Linux adds to local docker Unix group.
 > Once added will need to sign out of shell then back in
 
-&#x26AB; Test docker is running
+Test docker is running
 ```console
 $ docker version
 ```
 > Should see a response from both `Client:` and `Server:`
 
-&#x26AB; View docker images
+View docker images
 ```console
 $ docker image ls
 ```
 
-&#x26AB; Run a filter i.e. show only images tagged as latest  
+Run a filter i.e. show only images tagged as latest  
 ```console
 $ docker image ls --filter=reference="*:latest"
 ```
 
-&#x26AB; Search for images on Docker Hub
+Search for images on Docker Hub
 ```console
 $ docker search alpine
 ```
 
-&#x26AB; Filter for official images
+Filter for official images
 ```console
 $ docker search alpine --filter "is-official=true"
 ```
 
-&#x26AB; Inspect a docker image
+Inspect a docker image
 ```console
 $ docker image inspect ubuntu:latest
 ```
 
-&#x26AB; Remove a docker image
+Remove a docker image
 ```console
 $ docker image rm alpine:latest
 ```
 
-&#x26AB; Delete all docker images
+Delete all docker images
 ```console
 $ docker image rm $(docker image ls -q) -f
 ```
 
-&#x26AB; Pull a docker image
+Pull a docker image
 ```console
 $ docker image pull ubuntu:latest
 ```
 
-&#x26AB; Pull unofficial images
+Pull unofficial images
 ```console
 $ docker image pull <username>/<image>:<tag>
 ```
 
-&#x26AB; Pull from a registery other than Docker Hub
+Pull from a registery other than Docker Hub
 > i.e. Google Container Registry (GCR - gcr.io)
 ```console
 $ docker image pull gcr.io/USERNAME/image:latest
 ```
 
-&#x26AB; Spin up a quick container
+Spin up a quick container
 ```console
 $ docker container run -it ubuntu:latest /bin/bash
 ``` 
@@ -80,32 +80,32 @@ $ docker container run --name ctrl -it alpine:latest sh
 > The `-it` flag attaches current shell to terminal of the container.
 > To exit this container without terminating it - press `Ctrl-PQ`
 
-&#x26AB; View docker containers
+View docker containers
 ```console
 $ docker container ls
 ```
 
-&#x26AB; Connect to a docker container
+Connect to a docker container
 ```console
 $ docker container exec -it CONTAINER <name>|<id> bash
 ```
 
-&#x26AB; Stop a docker container
+Stop a docker container
 ```console
 $ docker container stop CONTAINER <name>|<id>
 ```
 
-&#x26AB; Remove a docker container
+Remove a docker container
 ```console
 $ docker container rm CONTAINER <name>|<id>
 ```
 
-&#x26AB; Remove all docker containers
+Remove all docker containers
 ```console
 $ docker container rm $(docker container ls -aq) -f
 ```
 
-&#x26AB; Docker container restart policies
+Docker container restart policies
   * always
   * unless-stopped
   * on-failed
@@ -118,14 +118,14 @@ $ docker container run --name <name> -it --restart always
 > unless-stopped will not restart when the daemon restarts if they
 > were initially stopped. --restart always will.
 
-&#x26AB; Run docker container as a background process
+Run docker container as a background process
 ```console
 $ docker container run -d --name <name> -p 80:8080\ <repo-name>|<image>
 ```
 > -d stands for daemon mode and 
 > -p sets ports as host:container. localhost:80 is mapped to 8080 inside the container
 
-&#x26AB; Simple Dockerfile for basic Node.js app
+Simple Dockerfile for basic Node.js app
 ```console
 FROM alpine
 RUN apk add --update nodejs nodejs-npm
@@ -136,17 +136,17 @@ EXPOSE 8080
 ENTRYPOINT ["node", "./app.js"]
 ```
 
-&#x26AB; Build a docker image from a Dockerfile
+Build a docker image from a Dockerfile
 ```console
 $ docker image build -t test:latest
 ```
 
-&#x26AB; Run a docker container from a docker image
+Run a docker container from a docker image
 ```console
 $ docker container run -d --name web1 --publish 8080:8080 test:latest
 ```
 
-&#x26AB; No Space left on device
+No Space left on device
 ```console
 $ rm -rf  ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.qcow2
 ```

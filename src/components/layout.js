@@ -66,18 +66,6 @@ const Layout = ({ location, title, children }) => {
         >
           <Bio />
         </div>
-        <ul className={layoutStyles.bgBubbles}>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
       </header>
       <div
           style={{
