@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import LeafletMap from "../components/leafletmap"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
@@ -37,6 +38,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        {
+          post.frontmatter.geo && <LeafletMap geo={post.frontmatter.geo} />
+        }
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -90,7 +94,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
+        description,
+        geo
       }
     }
   }

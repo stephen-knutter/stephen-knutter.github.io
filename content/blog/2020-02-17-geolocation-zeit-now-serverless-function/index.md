@@ -2,6 +2,7 @@
 title: Geolocation with nextjs and zeit now serverless functions
 date: "2020-02-17T22:12:03.284Z"
 tags: "javascript typescript nodejs zeit now"
+geo: "39.7067 -104.9694"
 description: "Detect a user's geolocation on serverless functions with zeit now and next.js. By gaining the ip address from the node.js request object, this address can be used with the geoip-lite npm package to map an ip address to a specific set of coordinates"
 ---
 
@@ -37,7 +38,7 @@ export default (req, res) => {
 
     const clientIp = requestIp.getClientIp(req)
         .replace('::1', '')
-        .replace('127.0.0.1', '') || '72.1.69.153' // <-- default location
+        .replace('127.0.0.1', '') || '72.1.69.153' // <-- default location `KY`
     const geo = geoip.lookup(clientIp)
     res.status(200).json({ geo })
 
@@ -125,7 +126,7 @@ Go to the zeit dashboard and find the deployment url, it will be in the format o
 
 go to the deployment url to see actual geolocation
 
-This is from a request made in south Denver
+This is from a request made from my location in south Denver
 
 **range:** 11347292161134730239  
 **country:** US  
