@@ -1,5 +1,5 @@
 ---
-title: Geolocation with next.js and zeit now serverless functions
+title: Geolocation with nextjs and zeit now serverless functions
 date: "2020-02-17T22:12:03.284Z"
 tags: "javascript typescript nodejs zeit now"
 description: "Detect a user's geolocation on serverless functions with zeit now and next.js. By gaining the ip address from the node.js request object, this address can be used with the geoip-lite npm package to map an ip address to a specific set of coordinates"
@@ -45,7 +45,17 @@ export default (req, res) => {
 ```
 
 Inside `Pages/index.js` display the geo information
+
+Add one additional package
+```
+yarn add swr
+```
+
+Then add the following code
+
 ```javascript
+// Pages/index.js
+
 import fetch from 'isomorphic-unfetch'
 import useSWR from 'swr'
 
@@ -109,7 +119,13 @@ npx now
 
 This will run `yarn build` and deploy the output from the `.next` folder
 
-Once the project is deployed, go to the deployment url to see actual geolocation
+Once the project is deployed a success message will appear in the terminal ✅
+
+Go to the zeit dashboard and find the deployment url, it will be in the format of `https://<project-name>-<uid>.now.sh`
+
+go to the deployment url to see actual geolocation
+
+This is from a request made in south Denver
 
 **range:** 11347292161134730239  
 **country:** US  
