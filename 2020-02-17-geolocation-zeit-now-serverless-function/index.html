@@ -23,7 +23,12 @@
 
 <span class="token punctuation">}</span></code></pre></div>
 <p>Inside <code class="language-text">Pages/index.js</code> display the geo information</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> fetch <span class="token keyword">from</span> <span class="token string">'isomorphic-unfetch'</span>
+<p>Add one additional package</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">yarn add swr</code></pre></div>
+<p>Then add the following code</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Pages/index.js</span>
+
+<span class="token keyword">import</span> fetch <span class="token keyword">from</span> <span class="token string">'isomorphic-unfetch'</span>
 <span class="token keyword">import</span> useSWR <span class="token keyword">from</span> <span class="token string">'swr'</span>
 
 <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">fetcher</span><span class="token punctuation">(</span><span class="token parameter">path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -73,7 +78,10 @@
 <p>Once signed up, deploy is as easy as running the following</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">npx now</code></pre></div>
 <p>This will run <code class="language-text">yarn build</code> and deploy the output from the <code class="language-text">.next</code> folder</p>
-<p>Once the project is deployed, go to the deployment url to see actual geolocation</p>
+<p>Once the project is deployed a success message will appear in the terminal ✅</p>
+<p>Go to the zeit dashboard and find the deployment url, it will be in the format of <code class="language-text">https://&lt;project-name&gt;-&lt;uid&gt;.now.sh</code></p>
+<p>go to the deployment url to see actual geolocation</p>
+<p>This is from a request made in south Denver</p>
 <p><strong>range:</strong> 11347292161134730239<br>
 <strong>country:</strong> US<br>
 <strong>region:</strong> CO<br>

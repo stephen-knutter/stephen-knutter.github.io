@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Stephen Knutter]]></title><description><![CDATA[Stephen Knutter's Blog]]></description><link>https://stephen.knutter.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 17 Feb 2020 16:39:14 GMT</lastBuildDate><item><title><![CDATA[Geolocation with nextjs and zeit now serverless functions]]></title><description><![CDATA[Next.js Docs List of  starter projects: Next.js examples Use the api-routes starter project: Inside  directory, delete  file Inside…]]></description><link>https://stephen.knutter.github.io/2020-02-17-geolocation-zeit-now-serverless-function/</link><guid isPermaLink="false">https://stephen.knutter.github.io/2020-02-17-geolocation-zeit-now-serverless-function/</guid><pubDate>Mon, 17 Feb 2020 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/getting-started&quot;&gt;Next.js Docs&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Stephen Knutter]]></title><description><![CDATA[Stephen Knutter's Blog]]></description><link>https://stephen.knutter.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 17 Feb 2020 16:59:00 GMT</lastBuildDate><item><title><![CDATA[Geolocation with nextjs and zeit now serverless functions]]></title><description><![CDATA[Next.js Docs List of  starter projects: Next.js examples Use the api-routes starter project: Inside  directory, delete  file Inside…]]></description><link>https://stephen.knutter.github.io/2020-02-17-geolocation-zeit-now-serverless-function/</link><guid isPermaLink="false">https://stephen.knutter.github.io/2020-02-17-geolocation-zeit-now-serverless-function/</guid><pubDate>Mon, 17 Feb 2020 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/getting-started&quot;&gt;Next.js Docs&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;List of &lt;code class=&quot;language-text&quot;&gt;next.js&lt;/code&gt; starter projects:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/zeit/next.js/tree/canary/examples&quot;&gt;Next.js examples&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Use the api-routes starter project:&lt;/p&gt;
@@ -23,7 +23,12 @@
 
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Inside &lt;code class=&quot;language-text&quot;&gt;Pages/index.js&lt;/code&gt; display the geo information&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; fetch &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;isomorphic-unfetch&apos;&lt;/span&gt;
+&lt;p&gt;Add one additional package&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;yarn add swr&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then add the following code&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Pages/index.js&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; fetch &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;isomorphic-unfetch&apos;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; useSWR &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;swr&apos;&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;fetcher&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -73,7 +78,10 @@
 &lt;p&gt;Once signed up, deploy is as easy as running the following&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;npx now&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This will run &lt;code class=&quot;language-text&quot;&gt;yarn build&lt;/code&gt; and deploy the output from the &lt;code class=&quot;language-text&quot;&gt;.next&lt;/code&gt; folder&lt;/p&gt;
-&lt;p&gt;Once the project is deployed, go to the deployment url to see actual geolocation&lt;/p&gt;
+&lt;p&gt;Once the project is deployed a success message will appear in the terminal ✅&lt;/p&gt;
+&lt;p&gt;Go to the zeit dashboard and find the deployment url, it will be in the format of &lt;code class=&quot;language-text&quot;&gt;https://&amp;lt;project-name&amp;gt;-&amp;lt;uid&amp;gt;.now.sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;go to the deployment url to see actual geolocation&lt;/p&gt;
+&lt;p&gt;This is from a request made in south Denver&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;range:&lt;/strong&gt; 11347292161134730239&lt;br&gt;
 &lt;strong&gt;country:&lt;/strong&gt; US&lt;br&gt;
 &lt;strong&gt;region:&lt;/strong&gt; CO&lt;br&gt;
