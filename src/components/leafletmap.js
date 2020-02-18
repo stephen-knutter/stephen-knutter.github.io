@@ -1,6 +1,6 @@
 import React from "react"
 import { Map, TileLayer, Marker, Popup } from "react-leaflet"
-import './leafletmap.css';
+import "./leafletmap.css"
 
 const OpenMarker = props => {
     const initMarker = ref => {
@@ -22,7 +22,7 @@ const LeafletMap = ({ geo }) => {
                     url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
                 />
                 <OpenMarker position={position}>
-                    <Popup onOpen={() => true}>
+                    <Popup>
                         Geo: {geo}
                     </Popup>
                 </OpenMarker>

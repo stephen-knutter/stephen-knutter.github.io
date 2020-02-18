@@ -1,5 +1,5 @@
 ---
-title: Deeply nested array of subdocuments in mongodb
+title: Access Deeply Nested Array of Subdocuments in Mongodb
 date: "2018-11-23T22:12:03.284Z"
 tags: "mongodb database"
 description: "Access a deeply nested array of subdocuments in mongodb utilizing the aggregation pipeline"

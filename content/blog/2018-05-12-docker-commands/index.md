@@ -1,5 +1,5 @@
 ---
-title: A list of helpful docker commands
+title: A List of Helpful Docker Commands
 date: "2018-09-12T22:12:03.284Z"
 tags: "docker devops"
 description: "A quick reference of docker commands for running containers and creating images"

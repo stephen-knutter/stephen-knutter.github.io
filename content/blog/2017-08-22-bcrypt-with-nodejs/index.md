@@ -1,5 +1,5 @@
 ---
-title: Salt and hash passwords with Bcrypt
+title: Salt and Hash Passwords with Bcrypt
 date: "2017-08-22T22:12:03.284Z"
 tags: "bcrypt nodejs security javascript"
 description: "Using Bcrypt with nodejs to salt and hash passwords"

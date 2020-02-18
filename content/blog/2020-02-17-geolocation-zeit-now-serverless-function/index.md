@@ -1,5 +1,5 @@
 ---
-title: Geolocation with nextjs and zeit now serverless functions
+title: Geolocation with Nextjs and ZEIT Now Serverless Functions
 date: "2020-02-17T22:12:03.284Z"
 tags: "javascript typescript nodejs zeit now"
 geo: "39.7067 -104.9694"
@@ -111,7 +111,7 @@ Example output from `localhost:3000` with the default Kentucky based ip -> `72.1
 **metro:** 529  
 **area:** 500  
 
-To see this in action, deploy this to the [zeit now platform](https://zeit.co/solutions/nextjs)
+To see this in action, deploy this to the [ZEIT Now platform](https://zeit.co/solutions/nextjs)
 
 Once signed up, deploy is as easy as running the following
 ```bash
