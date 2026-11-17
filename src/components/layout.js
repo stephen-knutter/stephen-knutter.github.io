@@ -78,7 +78,7 @@ const Layout = ({ location, title, children }) => {
       >
         <main>{children}</main>
       </div>
-      <footer style={{
+      {/* <footer style={{
         padding: `${rhythm(3.3)}`,
         backgroundColor: '#F5F2F0'
       }}>
@@ -89,7 +89,7 @@ const Layout = ({ location, title, children }) => {
           by <Link to={`/`} style={{color: '#000000'}}><strong>{title}</strong></Link>
           {` `}
           in &#128205; Denver, Colorado
-      </footer>
+      </footer> */}
     </Fragment>
   )
 }

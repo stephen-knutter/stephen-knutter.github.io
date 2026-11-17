@@ -9,7 +9,7 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 // import Image from "gatsby-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCodeBranch } from '@fortawesome/free-solid-svg-icons'
+import { faCodeBranch, faHandPeace } from '@fortawesome/free-solid-svg-icons'
 
 import { rhythm } from "../utils/typography"
 
@@ -37,8 +37,9 @@ const Bio = () => {
   const { author } = data.site.siteMetadata
   return (
     <div style={{paddingBottom: rhythm(2.4), zIndex: 2}}>
-      <Link to={`/`}><h1 style={{color: `white`, display: `inline-block`}}>{author}</h1></Link>
-      <p><FontAwesomeIcon style={{color: 'hotpink'}} icon={faCodeBranch} size="lg" />&nbsp;&nbsp;Web &amp; Mobile JS Developer</p>
+      <h1 style={{color: `white`, display: `inline-block`}}><FontAwesomeIcon style={{color: 'hotpink'}} icon={faHandPeace} size="lg" />&amp;{author}</h1>
+      {/* <Link to={`/`}><h1 style={{color: `white`, display: `inline-block`}}>{author}</h1></Link> */}
+      {/* <p><FontAwesomeIcon style={{color: 'hotpink'}} icon={faCodeBranch} size="lg" />&nbsp;&nbsp;Web &amp; Mobile JS Developer</p> */}
     </div>
   )
 }
